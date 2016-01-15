@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ahad"  default="copy" basedir="">
+
+<target name="create" >
+<mkdir dir="bin"></mkdir>
+
+<mkdir dir="lib">
+
+</mkdir>
+
+</target>
+
+
+<target  name="compile" >
+<javac includeantruntime="false" srcdir="F:\New folder\abc\src"  destdir="F:\New folder\abc\ant\build\bin" ></javac>
+</target>
+
+<target name="run"  depends="create" >
+<java classname="abc.demo">   <classpath path="F:\New folder\abc\ant\build\bin">  </classpath>
+</java>
+</target>
+<target name="copy">
+<copydir src="F:\New folder\abc\src"  dest="F:\New folder\abc\ant\build\lib"></copydir>
+
+</target>
+
+
+</project>
